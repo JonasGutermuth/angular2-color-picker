@@ -1,5 +1,4 @@
-import {bootstrap} from '@angular/platform-browser-dynamic';
-import {AppComponent} from './src/app.component';
-import {ColorPickerService} from "ct-angular2-color-picker/component";
+import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+import { AppModule } from './app.module';
 
-bootstrap(AppComponent, [ColorPickerService]);
+platformBrowserDynamic().bootstrapModule(AppModule);

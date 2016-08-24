@@ -271,10 +271,12 @@ export class ColorPickerDirective implements OnInit {
     }
 
     ngOnInit() {
-        let hsva = this.service.stringToHsva(this.colorPicker);
-        if (hsva !== null) {
-            this.colorPickerChange.emit(this.service.outputFormat(hsva, this.cpOutputFormat));
-        }
+        setTimeout(_=> {
+            let hsva = this.service.stringToHsva(this.colorPicker);
+            if (hsva !== null) {
+                this.colorPickerChange.emit(this.service.outputFormat(hsva, this.cpOutputFormat));
+            }
+        });
     }
 
     onClick() {

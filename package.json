@@ -1,25 +1,27 @@
 {
   "name": "ct-angular2-color-picker",
   "author": "Benjamin Cousin <b.cousin@code-troopers.com",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "repository": {
     "type": "git",
     "url": "https://github.com/bbbenja/angular2-color-picker.git"
   },
   "scripts": {
     "watch": "tsc -p src -w",
-    "build": "rm -rf lib && tsc -p src",
+    "build": "rm -rf lib && tsc -p src && cp src/*.ts lib",
     "postinstall": "typings install",
     "typings":"typings",
     "tsc": "tsc"
   },
   "license": "MIT",
   "dependencies": {
-    "@angular/core": "2.0.0-rc.3"
+    "@angular/core": "2.0.0-rc.5",
+    "rxjs": "5.0.0-beta.6",
+    "zone.js": "^0.6.12"
   },
   "devDependencies": {
     "typescript": "^1.8.10",
-    "typings": "^0.8.1"
+    "typings": "^1.0.4"
   }
 }
 

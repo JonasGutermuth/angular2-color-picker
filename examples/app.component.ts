@@ -2,11 +2,11 @@ import {Component} from '@angular/core';
 import {ColorPickerDirective} from 'ct-angular2-color-picker/component'
 
 @Component({
+    moduleId: module.id,
     selector: 'my-app',
-    templateUrl: '/src/app.component.html',
+    templateUrl: './app.component.html',
     directives: [ColorPickerDirective]
 })
-
 export class AppComponent {
     private color: string = "#127bdc";
     private color2: string = "hsla(300,82%,52%)";
