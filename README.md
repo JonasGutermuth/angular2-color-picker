@@ -68,6 +68,13 @@ Default option is the first item.
 [cpCancelButtonText]="'Cancel'"
 ```
 
+#Events / Outputs
+ColorPicker directive also has an output event, `colorPickerChange` that emits a string value of the currently selected color, whenever a change to that value is made.
+```html
+ (colorPickerChange)="yourMethod($event)"
+```
+Where `$event` holds the new string color value.
+
 #Extra content
 If you want to change precalculated images for color picker sliders, you can find a little script in this project:
 https://github.com/Alberplz/angular-colorpicker-directive
